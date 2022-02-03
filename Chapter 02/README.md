@@ -171,6 +171,108 @@ Now, we will replicate the above codes, but in numpy instead of pure python.
 
 Numpy not only makes it easier to code, but also makes processing faster.
 
-You are not likely to notice much of a performance difference in the code mentioned in this chapter, but when it comes to large matrices, the difference stars to be noticeable.
+You are not likely to notice much of a performance difference in the code mentioned in this chapter, but when it 
+comes to large matrices, the difference stars to be noticeable.
+
+&nbsp;
+
+#### Single neuron with numpy
 
 
+```python
+import numpy as np
+
+inputs = [1, 2, 3, 2.5]
+weights = [0.2, 0.8, -0.5, 1]
+bias = 2
+
+#In the above codes, we did something like element wise multiplication. That is precisely what dot product does.
+outputs = np.dot(inputs, weights) + bias 
+
+print(outputs)
+
+>>> 4.8
+```
+
+#### Layer of neurons with numpy
+
+```python
+import numpy as np
+
+inputs = [1.0, 2.0, 3.0, 2.5]
+
+weights = [ [0.2, 0.8, -0.5, 1],
+            [0.5, -0.91, 0.26, -0.5],
+            [-0.26, -0.27, 0.17, 0.87]]
+
+biases = [2.0, 3.0, 0.5]
+
+layer_outputs = np.dot(weights, inputs) + biases
+
+print(layer_outputs)
+>>> array([4.8, 1.21, 2.385])
+```
+
+
+### Batch of Data
+
+You can think of batches as a set of inputs, from the entire dataset.
+
+The reason we need to care about batches is that we use it prallelize our computations.
+
+And another reason is that we dont want to over fit the model. This happens when the network learn the training data too perfectly, and makes correct predictions on train data, but fails to generalize to new data.
+
+The size of batch you select is kinda important. Look at the following animation to know why.
+
+[How batches can help with fitment](https://nnfs.io/vyu/)
+
+In this case, 'fit' means you drawing a line that best fits the data. Method of least squares is used to find that line.
+
+A batch will look something like this
+
+```python
+batch = [
+    [array1],
+    [array2],
+    [array3],
+    [array4],
+    [array5],
+    [array6]
+]
+
+#This is example with batch size being 6 
+```
+
+### Layer of neurons in numpy with batches of data
+
+Note - Here, I assume you have idea of dot product and transpose of a matrix.
+
+Here, you need to transpose the weights matrix, and then do dot product.
+The reason to do transpose can be seen here - [Why we need to transpose weights](https://nnfs.io/crq/)
+
+```python
+import numpy as np
+inputs = [  [1.0, 2.0, 3.0, 2.5],
+            [2.0, 5.0, -1.0, 2.0],
+            [-1.5, 2.7, 3.3, -0.8]]
+
+weights = [ [0.2, 0.8, -0.5, 1.0],
+            [0.5, -0.91, 0.26, -0.5],
+            [-0.26, -0.27, 0.17, 0.87]]
+biases = [2.0, 3.0, 0.5]
+layer_outputs = np.dot(inputs, np.array(weights).T) + biases
+print(layer_outputs)
+>>>
+array([[4.8, 1.21, 2.385],
+[8.9, -8.91, 0.2],
+[1.41, 1.051, 0.026]])
+```
+
+The code visualized:
+
+[Matrix product with row and column vectors with a batch of inputs to the neural network](https://nnfs.io/gjw/)
+
+[Adding biases after the matrix product from a batch of inputs](https://nnfs.io/qty/)
+
+---
+Chapter 2 of nnfs book
