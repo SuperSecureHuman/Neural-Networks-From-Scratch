@@ -173,3 +173,4 @@ Numpy not only makes it easier to code, but also makes processing faster.
 
 You are not likely to notice much of a performance difference in the code mentioned in this chapter, but when it comes to large matrices, the difference stars to be noticeable.
 
+
