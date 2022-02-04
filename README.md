@@ -8,3 +8,7 @@ I will be making extensive use of the animations the author made, and made it av
 
 Huge kudos to the authors for the book, and the excellent animations they made.
 
+### Some other resources used in this repo
+
+[The neural network images i've put in here - NN-SVG](http://alexlenail.me/NN-SVG/index.html)
+
