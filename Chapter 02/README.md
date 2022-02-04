@@ -10,7 +10,7 @@ You will require python, numpy and matplotlib for the rest of this journey.
 
 ---
 
-![](assets/20220203_180008_image.png)
+![](./assets/neuron_3_input.png)
 
 Here you can see that the neuron has 3 inputs (plus there is a bias)
 
@@ -58,7 +58,7 @@ Upto now we have looked at only one neuron.
 
 Lets step it up to a layer of neurons.
 
-![](assets/20220203_183104_image.png)
+![](assets/4-3_neural_network.png)
 
 Since we have a layer, instead of single neuron, we will now have a set of weights and biases.
 
