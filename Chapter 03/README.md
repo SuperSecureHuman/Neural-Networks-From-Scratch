@@ -63,5 +63,110 @@ You can see that we have a spiral-ish data set with us. Note the the neural netw
 
 ---
 
-Continueing tommorrow :)
+### Dense Layer Class
+
+
+Since we are no longer typing down our data, we must try make something similar for our layers too.
+
+We are gonna make a class for this, and have 2 functions for now.
+
+```python
+class Layer_Dense:
+    def __init__(self, n_inputs, n_neurons):
+        # Initialize weights and biases
+        # using pass statement as a placeholder
+        pass
+        
+    # Forward pass
+    def forward(self,inputs):
+        # Calculate output values from inputs, weights and biases
+        # using pass statement as a placeholder
+        pass 
+```
+
+When ever you train a model from scratch, the intial weights will be initialized randomly. 
+
+Now we will look at initializing random weights in our class.
+
+```python
+    #Layer init
+
+    def __init__(self, n_inputs, n_neurons):
+        self.weights = 0.1 * np.random.randn(n_inputs, n_neurons)
+        self.biases = np.zeros((1, n_neurons))
+```
+
+Numpy's random.randn follows gaussian distribution. It creates random numbers, with variance being 1, and mean being 0 (close to 1 and 0). It takes inputs as the dimensions of the array.
+
+```python
+import numpy as np
+import nnfs
+
+nnfs.init()
+
+print(np.random.randn(2,5))
+
+>>>
+array([[ 1.7640524 ,  0.4001572 ,  0.978738  ,  2.2408931 ,  1.867558  ],
+       [-0.9772779 ,  0.95008844, -0.1513572 , -0.10321885,  0.41059852]],
+      dtype=float32)
+```
+
+np.zeros functions makes a array with 0's with the given dimensions.
+
+```python
+import numpy as np
+print(np.zeros((2,5)))
+>>>
+[[0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0.]]
+```
+
+Now we will look at how our method (function) initilaizes the weights and biases.
+
+```python
+import numpy as np
+import nnfs
+
+nnfs.init()
+
+n_inputs = 2
+n_neurons = 4
+
+weights = 0.01 * np.random.randn(n_inputs, n_neurons)
+biases = np.zeros((1, n_neurons))
+
+print(weights)
+print(biases)
+
+>>>
+[[ 0.01764052, 0.00400157, 0.00978738, 0.02240893],
+[ 0.01867558, -0.00977278, 0.00950088, -0.00151357]]
+
+[[0. 0. 0. 0.]]
+```
+
+Now we will fillup our class with forward pass.
+
+```python
+class Layer_Dense:
+    def __init__(self, n_inputs, n_neurons):
+        self.weights = 0.1 * np.random.randn(n_inputs, n_neurons)
+        self.biases = np.zeros((1, n_neurons))      
+        
+    # Forward pass
+    def forward(self,inputs):
+        self.output = np.dot(inputs, self.weights) + self.biases
+```
+
+Now we will go to notebook, see this code in action
+
+[Complete code upto now](./2.complete_code_now.ipynb)
+
+---
+
+Chapter 3 of nnfs book
+
+
+
 
