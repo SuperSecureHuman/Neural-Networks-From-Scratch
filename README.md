@@ -12,15 +12,15 @@ Huge kudos to the authors for the book, and the excellent animations they made.
 
 ---
 
-[Chapter 01 - The idea of neurons]('./Chapter 01/')
+[Chapter 01 - The idea of neurons](./Chapter%2001/)
 
-[Chapter 02 - Creating a neuron]('./Chapter 02/')
+[Chapter 02 - Creating a neuron](./Chapter%2002/)
 
-[Chapter 03 - Adding Layers]('./Chapter 03/')
+[Chapter 03 - Adding Layers](./Chapter%2003/)
 
-[Chapter 04 - Activation Functions]('./Chapter 04/')
+[Chapter 04 - Activation Functions](./Chapter%2004/)
 
-[Chapter 05 - Loss Functions]('./Chapter 05/')
+[Chapter 05 - Loss Functions](./Chapter%2005/)
 
 ## Some other resources used in this repo
 
