@@ -24,6 +24,8 @@ Huge kudos to the authors for the book, and the excellent animations they made.
 
 [Chapter 06 - Introduction to Optimization](./Chapter%2006/)
 
+[Chapter 07 - Derivatives](./Chapter%2007/)
+
 ## Some other resources used in this repo
 
 [The neural network images i've put in here - NN-SVG](http://alexlenail.me/NN-SVG/index.html)
