@@ -26,6 +26,10 @@ Huge kudos to the authors for the book, and the excellent animations they made.
 
 [Chapter 07 - Derivatives](./Chapter%2007/)
 
+[Chapter 08 - Partial Derivatives](./Chapter%2008/)
+
+[Chapter 09 - Backpropogation](./Chapter%2009/)
+
 ## Some other resources used in this repo
 
 [The neural network images i've put in here - NN-SVG](http://alexlenail.me/NN-SVG/index.html)
